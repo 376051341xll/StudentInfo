@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生成绩管理系统</title>
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script src="./jquery-3.2.1.js"></script>
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="function.js"></script>
+    <script src="../ajax.js"></script>
+    <script src="../login.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded",function () {
+            loadAllGrades(document.getElementById("tbody"))
+            })
+
+    </script>
+</head>
+<body>
+<br><br>
+   <div class="container">
+       <ul class="nav nav-pills">
+           <li role="presentation" class="active"><a href="#">全部成绩</a></li>
+           <li role="presentation"><a href="search.html">查询成绩</a></li>
+           <li role="presentation"><a href="inputs.html">录入成绩</a></li>
+       </ul>
+   </div>
+
+   <div class="container">
+    <table class="table table-striped" id="table">
+        <caption>成绩单</caption>
+        <thead >
+        <tr>
+            <th >姓名</th>
+            <th >学号</th>
+            <th >班级</th>
+            <th >数学</th>
+            <th >语文</th>
+            <th >英语</th>
+            <th >编程</th>
+            <th >平均</th>
+            <th>总分</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+
+    </table>
+   </div>
+</body>
+</html>

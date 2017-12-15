@@ -1,0 +1,36 @@
+{
+  "name": "MyWeb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zuoyoufei/wenshi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zuoyoufei/wenshi/issues"
+  },
+  "homepage": "https://github.com/zuoyoufei/wenshi#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "crypto": "^1.0.1",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "md5": "^2.2.1",
+    "mongoose": "^4.13.6",
+    "nodemailer": "^4.4.0",
+    "orm": "^4.0.2",
+    "sqlite": "^2.9.0",
+    "sqlite3": "^3.1.8"
+  },
+  "engines": {
+    "node": "^8.9.1"
+  }
+}

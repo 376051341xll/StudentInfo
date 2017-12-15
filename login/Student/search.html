@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生成绩管理系统</title>
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script src="./jquery-3.2.1.js"></script>
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="function.js"></script>
+    <script src="../login.js"></script>
+
+</head>
+<body>
+<br><br>
+
+<div class="modal fade" id="beforeCorrect" tabindex="-1" role="dialog" aria-labelledby="beforeCorrectLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title" id="correctLable">修改</h3>
+            </div>
+            <div class="modal-body">
+                <form id="changeForm">
+                    <div class="form-group">
+                        <label for="correctName" class="control-label">姓名</label>
+                        <input type="text" class="form-control" id="correctName" >
+                    </div>
+                    <div class="form-group">
+                        <label for="correctStudyNumber" class="control-label">学号</label>
+                        <input type="text" class="form-control" id="correctStudyNumber" >
+                    </div>
+                    <div class="form-group">
+                        <label for="correctKlass" class="control-label">班级</label>
+                        <input type="text" class="form-control" id="correctKlass" >
+                    </div>
+                    <div class="form-group">
+                        <label for="correctMathGrade" class="control-label">数学成绩</label>
+                        <input type="text" class="form-control" id="correctMathGrade" >
+                    </div>
+                    <div class="form-group">
+                        <label for="correctChineseGrade" class="control-label">语文成绩</label>
+                        <input type="text" class="form-control" id="correctChineseGrade" >
+                    </div>
+                    <div class="form-group">
+                        <label for="correctEnglishGrade" class="control-label">英语成绩</label>
+                        <input type="text" class="form-control" id="correctEnglishGrade" >
+                    </div>
+                    <div class="form-group">
+                        <label for="correctProgramGrade" class="control-label">编程成绩</label>
+                        <input type="text" class="form-control" id="correctProgramGrade" >
+                    </div><br><br>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" onclick="saveCorrect(form.name)" >保存</button>
+                </form>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+  <div class="container">
+    <ul class="nav nav-pills">
+        <li role="presentation" ><a href="main.html">全部成绩</a></li>
+        <li role="presentation" class="active"><a href="search.html">查询成绩</a></li>
+        <li role="presentation"><a href="inputs.html">录入成绩</a></li>
+    </ul>
+  </div><br>
+
+  <div class="container">
+      <form class="navbar-form navbar-left" id="search">
+          <input id="stnumber" type="text" name="contents" class="form-control" placeholder="输入学号(可查询多个)">
+          <input type="button" id="btn" value="提交" >
+      </form>
+  </div>
+
+  <div class="container">
+    <table class="table table-striped" id="SearchTable">
+        <caption>查询</caption>
+        <thead>
+        <tr>
+            <th>姓名 </th>
+            <th> 学号 </th>
+            <th> 班级 </th>
+            <th>数学成绩</th>
+            <th>语文成绩</th>
+            <th>英语成绩</th>
+            <th>编程成绩</th>
+
+        </tr>
+        </thead>
+        <tbody id="SearchTbody">
+
+        </tbody>
+
+    </table>
+      <p class="text-right"  id="aver"></p>
+      <p class="text-right"  id="sum"></p>
+  </div>
+<script>
+    $('#btn').click(function(){
+        $('#SearchTbody').html('');
+        $('#SearchTbody').html('');
+       addGrades(document.getElementById("SearchTbody"));
+    })
+
+</script>
+</body>
+</html>

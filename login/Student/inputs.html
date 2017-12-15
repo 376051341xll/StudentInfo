@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生成绩管理系统</title>
+    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script src="./jquery-3.2.1.js"></script>
+    <script src="./bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script src="function.js"></script>
+    <script src="../login.js"></script>
+</head>
+<body>
+<br><br>
+  <div class="container">
+    <ul class="nav nav-pills">
+        <li role="presentation" ><a href="main.html">全部成绩</a></li>
+        <li role="presentation"><a href="search.html">查询成绩</a></li>
+        <li role="presentation" class="active"><a href="#">录入成绩</a></li>
+    </ul>
+  </div>
+
+  <div class="container">
+   <form name="inputInfo" id="inputs"  >
+    <fieldset>
+        <h2>添加学生</h2>
+        姓名：    <input id="name" type="text" name="Name"><br>
+        学号：    <input id="number" type="text" name="studyNumber"><br>
+        班级：    <input id="classnum" type="text" name="klass"><br>
+        数学：    <input id="math" type="text" name="mathGrade"><br>
+        语绩：    <input id="chinese" type="text" name="chineseGrade"><br>
+        英语：    <input id="english" type="text" name="englishGrade"><br>
+        编程：    <input id="code" type="text" name="programGrade"><br>
+        <input id="submit" type="submit" value="提交">
+    </fieldset>
+   </form>
+  </div>
+
+<script>
+    $('#submit').click(function(){
+        InfoCheckAndInput();
+    })
+</script>
+</body>
+</html>
